@@ -37,3 +37,27 @@ html body{
 	line-height: 31.2px;
 	letter-spacing: 0.04em;
 }
+
+.sobre{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	//background-color: #3367d6;
+	background-color: rgb(0, 113, 187)
+}
+
+.sobre-descricao{
+	width: 51%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: ModestoText-Bold;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	font-style: normal;
+	text-align: left;
+	line-height: 30px;
+	letter-spacing: 0em;
+}
