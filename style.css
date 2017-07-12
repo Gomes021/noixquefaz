@@ -3,16 +3,47 @@ html body{
 	padding: 0;
 }
 
-.header{
+* {
+	box-sizing: border-box;
+}
+.img-mobile{
+	display: none;
+}
+
+.inicio-secao{
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	//flex-direction: column;
 	height: 100vh;
 	background-image: url("Assets/Capa.jpg");
 	background-size: cover;
-
 }
+
+@media (max-width: 620px){
+	.inicio-secao{
+		background: url(Assets/mobile-capa.jpg) no-repeat center, center;
+		background-size: 100%;
+		
+	}
+
+	.img-mobile-laranja{
+		width: 100%;
+	}
+	.img-mobile{
+		display: block;
+	}
+	.img-header-laranja{
+		display: none;
+	}
+	.img-header-cinza{
+		display: none;
+	}
+	.img-header-noixqfaz{
+		display: none;
+	}
+}
+
 .menu{
 	position: fixed;
 	top: 0;
@@ -37,13 +68,57 @@ html body{
 	line-height: 31.2px;
 	letter-spacing: 0.04em;
 }
+.img-mobile{
+	opacity: 0;
+
+}
+
+
+
+.img-header-laranja{
+	width: 51%;
+	position:absolute;
+	top: 293px;
+	left: 100px;
+	z-index: 2
+	
+}
+
+.img-header-cinza{
+	width: 50%;
+	position: absolute;
+	top: 353px;
+	left: 470px;
+}
+
+
+.img-header-noixqfaz{
+	width: 13%;
+	position: absolute;
+	top: 525px;
+	left: 715px;
+}
+
+.header-descricao{
+	height: 4%;
+	width: 34%;
+	position: absolute;
+	top: 510px;
+	left: 225px;
+	z-index: 3;
+	font-family: ModestoText-Bold;
+	font-size: 16px;
+	line-height: 25px;
+	letter-spacing: 0em;
+}
+
 
 .sobre{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	min-height: 100vh;
+	height: 100vh;
 	//background-color: #3367d6;
 	background-color: rgb(0, 113, 187)
 }
@@ -56,8 +131,63 @@ html body{
 	font-family: ModestoText-Bold;
 	font-size: 20px;
 	color: rgb(255, 255, 255);
-	font-style: normal;
-	text-align: left;
 	line-height: 30px;
 	letter-spacing: 0em;
+}
+
+.acoes{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	height: 100vh;
+	background-color: rgb(216, 223, 33);
+}
+
+.acoes-container-slide{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	min-height: 100%;
+
+}
+
+.acoes-titulo{
+	color: blue;
+
+}
+
+.acoes-descricao{
+	font-family: ModestoInitials-Fill, ModestoText-Bold;
+	font-size: 16px, 20px;
+	color: rgb(0, 0, 0), rgb(0, 0, 255);
+	line-height: 28px,30px;
+	letter-spacing: 0em,0.02em;
+}
+
+.acoes-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 55%;
+	height: 16%;
+}
+.footer{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: rgb(157, 0, 93) url("Assets/Contato.svg") no-repeat center;
+	background-size: 55%;
+}
+
+.footer-descricao{
+	font-size: 19px;
+	color: rgb(0, 0, 0);
+	line-height: 31,7px;
+	letter-spacing: 0.06em;
+	font-weight: 900;
+	width: 18%;
 }
