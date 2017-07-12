@@ -14,7 +14,7 @@ html body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	//flex-direction: column;
+	flex-direction: column;
 	height: 100vh;
 	background-image: url("Assets/Capa.jpg");
 	background-size: cover;
@@ -23,8 +23,7 @@ html body{
 @media (max-width: 620px){
 	.inicio-secao{
 		background: url(Assets/mobile-capa.jpg) no-repeat center, center;
-		background-size: 100%;
-		
+		background-size: cover;
 	}
 
 	.img-mobile-laranja{
@@ -73,21 +72,40 @@ html body{
 
 }
 
-
-
 .img-header-laranja{
 	width: 51%;
 	position:absolute;
-	top: 293px;
+	bottom: 0;
 	left: 100px;
 	z-index: 2
-	
+}
+
+.img-mobile-laranja,
+.img-mobile-cinza,
+.img-mobile-noix {
+	opacity: 0;
+}
+
+@media (max-width: 650px) {
+
+	.img-header-laranja,
+	.img-header-cinza,
+	.img-header-noix {
+		opacity: 0;
+	}
+
+	.img-mobile-laranja,
+	.img-mobile-cinza,
+	.img-mobile-noix {
+		opacity: 1;
+	}
+
 }
 
 .img-header-cinza{
 	width: 50%;
 	position: absolute;
-	top: 353px;
+	bottom: 0;
 	left: 470px;
 }
 
