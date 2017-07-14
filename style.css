@@ -13,33 +13,17 @@ html body{
 .inicio-secao{
 	display: flex;
 	align-items: center;
-	justify-content: center;
 	flex-direction: column;
 	height: 100vh;
 	background-image: url("Assets/Capa.jpg");
 	background-size: cover;
+	justify-content: flex-end;
 }
 
 @media (max-width: 620px){
 	.inicio-secao{
 		background: url(Assets/mobile-capa.jpg) no-repeat center, center;
 		background-size: cover;
-	}
-
-	.img-mobile-laranja{
-		width: 100%;
-	}
-	.img-mobile{
-		display: block;
-	}
-	.img-header-laranja{
-		display: none;
-	}
-	.img-header-cinza{
-		display: none;
-	}
-	.img-header-noixqfaz{
-		display: none;
 	}
 }
 
@@ -67,10 +51,6 @@ html body{
 	line-height: 31.2px;
 	letter-spacing: 0.04em;
 }
-.img-mobile{
-	opacity: 0;
-
-}
 
 .img-header-laranja{
 	width: 51%;
@@ -84,22 +64,7 @@ html body{
 .img-mobile-cinza,
 .img-mobile-noix {
 	opacity: 0;
-}
-
-@media (max-width: 650px) {
-
-	.img-header-laranja,
-	.img-header-cinza,
-	.img-header-noix {
-		opacity: 0;
-	}
-
-	.img-mobile-laranja,
-	.img-mobile-cinza,
-	.img-mobile-noix {
-		opacity: 1;
-	}
-
+	display: none;
 }
 
 .img-header-cinza{
@@ -111,18 +76,17 @@ html body{
 
 
 .img-header-noixqfaz{
-	width: 13%;
+	width: 10%;
 	position: absolute;
-	top: 525px;
-	left: 715px;
+	bottom: 5%;
+	left: 55%;
 }
 
 .header-descricao{
-	height: 4%;
-	width: 34%;
 	position: absolute;
-	top: 510px;
-	left: 225px;
+	left: 18%;
+	bottom: 7%;
+	width: 30%;
 	z-index: 3;
 	font-family: ModestoText-Bold;
 	font-size: 16px;
@@ -130,6 +94,13 @@ html body{
 	letter-spacing: 0em;
 }
 
+@media (max-width: 650px) {
+	.header-descricao {
+		width: 90%;
+		left: 7%;
+		bottom: 5%;
+	}
+}
 
 .sobre{
 	display: flex;
@@ -137,7 +108,7 @@ html body{
 	align-items: center;
 	flex-direction: column;
 	min-height: 100vh;
-	//background-color: #3367d6;
+	background-color: #3367d6;
 	background-color: rgb(0, 113, 187)
 }
 
@@ -221,6 +192,48 @@ html body{
 	.footer{
 		background: rgb(157, 0, 93) url("Assets/Contato.svg") no-repeat 48% -15%;
 		background-size: 270%;
+	}
+
+}
+
+
+
+@media (max-width: 650px) {
+
+	.img-header-laranja,
+	.img-header-cinza,
+	.img-header-noix {
+		opacity: 0;
+	}
+
+	.img-mobile-laranja,
+	.img-mobile-cinza,
+	.img-mobile-noix {
+		opacity: 1;
+		display: block;
+	}
+
+	.inicio-secao {
+    	display: flex;
+    	justify-content: flex-end;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.img-mobile-cinza {
+		position: absolute;
+		top: -10%;
+	}
+
+	.img-mobile-laranja {
+		position: absolute;
+		bottom: -25%;
+	}
+	.img-mobile-noix {
+		position: absolute;
+		top: 15%;
+		right: 15%;
+		width: 35%;
 	}
 
 }
