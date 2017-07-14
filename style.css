@@ -213,8 +213,8 @@ html body{
 
 @media (max-width: 650px) {
 	.footer{
-		background: rgb(157, 0, 93) url("Assets/Mobile-Contato.svg") no-repeat center;
-		overflow: hidden;
+		background: rgb(157, 0, 93) url("Assets/Contato.svg") no-repeat 50%, 200%;
+		background-size: 100%;
 	}
 
 
